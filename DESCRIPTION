@@ -1,0 +1,22 @@
+Package: vegablock
+Title: Provides an Interface between Vega and Blocks
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "Ian",
+           family = "Lyttle",
+           role = c("aut", "cre"),
+           email = "ian.lyttle@schneider-electric.com",
+           comment = structure("0000-0001-9962-4849", .Names = "ORCID"))
+Description: The Blocks website <https://bl.ocks.org> provides a way to share 
+  JavaScript-based visualizations; the vegawidget package provides a way to 
+  compose and render Vega (JavaScript) visualizations using R. This package 
+  provides a bridge between the Blocks website and the vegawidget package. 
+  If you have a GitHub account, you can use this package to deploy Vega(-Lite)
+  blocks. Further, if a block contains a Vega(-Lite) specification and meets 
+  a specific format, you can use this package to import such a specification.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
+URL: https://github.com/ijlyttle/vegablock
+BugReports: https://github.com/ijlyttle/vegablock/issues
