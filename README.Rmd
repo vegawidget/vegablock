@@ -1,0 +1,30 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+[![Travis-CI Build Status](https://travis-ci.org/<USERNAME>/<REPO>.svg?branch=master)](https://travis-ci.org/<USERNAME>/<REPO>)
+
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# vegablock
+
+The goal of vegablock is to ...
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+## basic example code
+```
