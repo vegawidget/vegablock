@@ -7,3 +7,8 @@ r:
   - devel
 sudo: false
 cache: packages
+
+addons:
+  apt:
+    packages:
+      - libmagick++-dev # magick
