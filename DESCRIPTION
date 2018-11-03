@@ -31,6 +31,7 @@ Imports: vegawidget,
 Suggests: 
     magick,
     webshot,
+    webdriver,
     testthat
 Remotes: vegawidget/vegawidget    
 Roxygen: list(markdown = TRUE)
