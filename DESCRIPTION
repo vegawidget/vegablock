@@ -30,4 +30,5 @@ Imports: vegawidget,
     jsonlite
 Suggests: magick,
     webshot
+Remotes: vegawidget/vegawidget    
 Roxygen: list(markdown = TRUE)
