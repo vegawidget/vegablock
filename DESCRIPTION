@@ -23,6 +23,7 @@ BugReports: https://github.com/vegawidget/vegablock/issues
 Imports: vegawidget,
     yaml,
     gistr,
+    git2r,
     glue,
     assertthat,
     fs,
