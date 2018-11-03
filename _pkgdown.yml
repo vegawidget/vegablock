@@ -4,3 +4,8 @@ template:
 
 development:
   mode: unreleased
+
+addons:
+  apt:
+    packages:
+      - libmagick++-dev # magick

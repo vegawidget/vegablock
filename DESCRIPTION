@@ -28,7 +28,9 @@ Imports: vegawidget,
     fs,
     rlang,
     jsonlite
-Suggests: magick,
-    webshot
+Suggests: 
+    magick,
+    webshot,
+    testthat
 Remotes: vegawidget/vegawidget    
 Roxygen: list(markdown = TRUE)
