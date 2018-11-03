@@ -42,7 +42,7 @@
 #'   `"https://api.github.com"`; useful to specify with GitHub Enterprise,
 #'   e.g. `"https://github.acme.com/api/v3"`
 #'   (not yet implemented)
-#' @param git_method    `character`, use `"ssh"` or `"https"`
+#' @param git_method    `character`, use `"https"` (default) or `"ssh"`
 #' @param env_pat       `character`, name of environment variable that contains
 #'   a GitHub PAT (Personal Access Token), defaults to `"GITHUB_PAT"`;
 #'   Useful to specify with GitHub Enterprise, e.g. `"GITHUB_ACME_PAT"`
@@ -84,7 +84,7 @@ vw_create_block <- function(spec, embed = vega_embed(),
                             version = vega_version(major = FALSE),
                             description = NULL, readme = NULL,
                             use_thumbnail = TRUE, use_preview = TRUE,
-                            git_method = c("ssh", "https"),
+                            git_method = c("https", "ssh"),
                             endpoint = NULL, env_pat = NULL,
                             block_host = NULL, quiet = FALSE,
                             browse = TRUE) {
@@ -103,7 +103,7 @@ vw_create_block_gistid <- function(spec, embed = vega_embed(),
                                    version = vega_version(major = FALSE),
                                    description = NULL, readme = NULL,
                                    use_thumbnail = TRUE, use_preview = TRUE,
-                                   git_method = c("ssh", "https"),
+                                   git_method = c("https", "ssh"),
                                    endpoint = NULL, env_pat = NULL,
                                    block_host = NULL, quiet = FALSE,
                                    browse = TRUE) {
@@ -119,12 +119,14 @@ vw_create_block_gistid <- function(spec, embed = vega_embed(),
                              version = vega_version(major = FALSE),
                              description = NULL, readme = NULL,
                              use_thumbnail = TRUE, use_preview = TRUE,
-                             git_method = c("ssh", "https"),
+                             git_method = c("https", "ssh"),
                              endpoint = NULL, env_pat = NULL,
                              block_host = NULL, quiet = FALSE,
                              browse = TRUE) {
   # validate
   assert_packages("fs", "gistr")
+
+  git_method <- match.arg(git_method, c("https", "ssh"))
 
   # create temporary directory
   dir_temp <- fs::path(tempdir(), glue::glue("block-{as.numeric(Sys.time())}"))
