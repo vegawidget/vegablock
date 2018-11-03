@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • vegablock</title>
+<title>Specify block-configuration — vw_block_config • vegablock</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,7 +30,11 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Specify block-configuration — vw_block_config" />
+
+<meta property="og:description" content="Helper function to build a YAML configuartion-string. This string
+is sent to the gist in a file named .block." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -46,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -92,72 +96,64 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Specify block-configuration</h1>
+    <small class="dont-index">Source: <a href='https://github.com/vegawidget/vegablock/blob/master/R/utils-block.R'><code>R/utils-block.R</code></a></small>
+    <div class="hidden name"><code>vw_block_config.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Helper function to build a YAML configuartion-string. This string
+is sent to the gist in a file named <code>.block</code>.</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="as_vegaspec.html">as_vegaspec</a></code> </p>
-        </td>
-        <td><p>Coerce to vegaspec</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vega_embed.html">vega_embed</a></code> </p>
-        </td>
-        <td><p>Vega embed options</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vega_version.html">vega_version</a></code> </p>
-        </td>
-        <td><p>Determine Vega JavaScript versions</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vw_block_config.html">vw_block_config()</a></code> </p>
-        </td>
-        <td><p>Specify block-configuration</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vw_create_block.html">vw_create_block()</a></code> <code><a href="vw_create_block.html">vw_create_block_gistid()</a></code> </p>
-        </td>
-        <td><p>Create gist to use as block</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vw_retrieve_block.html">vw_retrieve_block()</a></code> </p>
-        </td>
-        <td><p>Retrieve vegaspec from block</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>vw_block_config</span>(<span class='kw'>license</span> <span class='kw'>=</span> <span class='st'>"mit"</span>, <span class='kw'>height</span> <span class='kw'>=</span> <span class='fl'>500L</span>, <span class='kw'>scrolling</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>border</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>license</th>
+      <td><p><code>character</code> specifies the license</p></td>
+    </tr>
+    <tr>
+      <th>height</th>
+      <td><p><code>integer</code> height of the block (pixels)</p></td>
+    </tr>
+    <tr>
+      <th>scrolling</th>
+      <td><p><code>logical</code> indicates to use scrolling bars</p></td>
+    </tr>
+    <tr>
+      <th>border</th>
+      <td><p><code>logical</code> indicates to put a border on the <code>&lt;iframe/&gt;</code></p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p><code>character</code> yaml string for <code>.block</code> file</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><a href='https://bl.ocks.org/-/about'>Blocks documentation</a></p></div>
+    
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
-    </ul>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#see-also">See also</a></li>
+          </ul>
+
   </div>
 </div>
 
