@@ -13,6 +13,8 @@ spec_mtcars <-
 
 test_that("we can create and retrieve a block", {
 
+  print(substr(Sys.getenv(), 1, 7))
+
   skip_on_cran()
   skip_if_not(has_github_pat, "GITHUB_PAT not available")
 
