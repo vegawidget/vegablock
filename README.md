@@ -1,5 +1,5 @@
 [![Travis-CI Build
-Status](https://travis-ci.org/%3CUSERNAME%3E/%3CREPO%3E.svg?branch=master)](https://travis-ci.org/%3CUSERNAME%3E/%3CREPO%3E)
+Status](https://travis-ci.org/vegawidget/vegablock.svg?branch=master)](https://travis-ci.org/vegawidget/vegablock)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/vegablock)](https://cran.r-project.org/package=vegablock)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
