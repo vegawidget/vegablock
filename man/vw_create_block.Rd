@@ -83,7 +83,7 @@ used in a pipe; \code{vw_create_block_gistid()} returns a list of information
 about the newly-created gist.
 }
 \details{
-You will need a GitHub \href{https://github.com/settings/tokens}{Personal Access Token}
+You will need a GitHub \href{https://github.com/settings/tokens}{Personal Access Token (PAT)}
 stored in an environment variable called \code{GITHUB_PAT}.
 See \href{http://happygitwithr.com/github-pat.html}{Happy Git with R}
 for more information on how to acquire and store a PAT.

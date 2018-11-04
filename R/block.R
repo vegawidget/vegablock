@@ -5,7 +5,7 @@
 #' used in a pipe; `vw_create_block_gistid()` returns a list of information
 #' about the newly-created gist.
 #'
-#' You will need a GitHub [Personal Access Token](https://github.com/settings/tokens)
+#' You will need a GitHub [Personal Access Token (PAT)](https://github.com/settings/tokens)
 #' stored in an environment variable called `GITHUB_PAT`.
 #' See [Happy Git with R](http://happygitwithr.com/github-pat.html)
 #' for more information on how to acquire and store a PAT.
@@ -130,6 +130,16 @@ vw_create_block_gistid <- function(spec, embed = vega_embed(),
 
   git_method <- match.arg(git_method, c("https", "ssh"))
 
+  # check that we have a github_pat
+  if (!.has_envvar(env_pat %||% "GITHUB_PAT")) {
+    warning("GitHub PAT environment variable not set", call. = FALSE)
+  }
+
+  # if https, check that we have a GITHUB_USERNAME
+  if (!.has_envvar("GITHUB_USERNAME")) {
+    warning("GITHUB_USERNAME environment variable not set", call. = FALSE)
+  }
+
   # create temporary directory
   dir_temp <- fs::path(tempdir(), glue::glue("block-{as.numeric(Sys.time())}"))
   fs::dir_create(dir_temp)
@@ -231,6 +241,11 @@ vw_retrieve_block <- function(id, file = NULL, endpoint = NULL, env_pat = NULL,
                               quiet = FALSE) {
 
   assert_packages("gistr")
+
+  # check that we have a github_pat
+  if (!.has_envvar(env_pat %||% "GITHUB_PAT")) {
+    warning("GitHub PAT environment variable not set", call. = FALSE)
+  }
 
   # defaults
   endpoint <- endpoint %||% "https://api.github.com"

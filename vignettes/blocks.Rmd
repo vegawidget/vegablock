@@ -4,7 +4,7 @@ date: "`r Sys.Date()`"
 output: rmarkdown::html_document
 ---
 
-```{r}
+```{r message=FALSE}
 library("vegablock")
 library("vegawidget")
 ```
@@ -27,7 +27,7 @@ As discussed above, you will need a GitHub PAT to use these functions. Unsurpris
 
 ## Create a block
 
-You can create a block using a vegaspec as an argument to `vw_create_block()`.
+You can create a block using a vegaspec as an argument to `vw_create_block()`. Here we use the sample vegaspec from **vegawidget**, `spec_mtcars`:
 
 ```{r eval=FALSE}
 vw_create_block(spec_mtcars)

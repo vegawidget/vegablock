@@ -168,4 +168,8 @@ vw_block_index <- function(embed = vega_embed(),
   text
 }
 
+# returns logical for existance of environment variable
+.has_envvar <- function(envvar_name) {
+  nchar(Sys.getenv(envvar_name)) > 0L
+}
 

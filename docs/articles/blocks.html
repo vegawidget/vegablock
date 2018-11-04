@@ -93,12 +93,6 @@
     
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(<span class="st">"vegablock"</span>)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(<span class="st">"vegawidget"</span>)</a></code></pre></div>
-<pre><code>## 
-## Attaching package: 'vegawidget'</code></pre>
-<pre><code>## The following objects are masked from 'package:vegablock':
-## 
-##     vw_block_config, vw_create_block, vw_create_block_gistid,
-##     vw_retrieve_block</code></pre>
 <p>Mike Bostock’s <a href="https://bl.ocks.org">blocks service</a> is a great resource for sharing visualizations. <em>Blocks</em> (as they are called) are not persistently stored on the blocks website; they are taken from GitHub <a href="https://gist.github.com">gists</a>.</p>
 <ul>
 <li><p>If you have the <a href="https://github.com/ropensci/magick#readme"><strong>magick</strong></a> and <a href="https://github.com/rstudio/webdriver#README"><strong>webdriver</strong></a> packages (with PhantomJS installed), you can include preview and thumb images with the block.</p></li>
@@ -114,8 +108,8 @@
 <div id="create-a-block" class="section level2">
 <h2 class="hasAnchor">
 <a href="#create-a-block" class="anchor"></a>Create a block</h2>
-<p>You can create a block using a vegaspec as an argument to <code><a href="../reference/vw_create_block.html">vw_create_block()</a></code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/vw_create_block.html">vw_create_block</a></span>(spec_mtcars)</a></code></pre></div>
+<p>You can create a block using a vegaspec as an argument to <code><a href="../reference/vw_create_block.html">vw_create_block()</a></code>. Here we use the sample vegaspec from <strong>vegawidget</strong>, <code>spec_mtcars</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/vw_create_block.html">vw_create_block</a></span>(spec_mtcars)</a></code></pre></div>
 <pre><code>## block url: https://bl.ocks.org/06a512525fbe7a96e1a2028e1871b61c
 ##  gist url: https://gist.github.com/06a512525fbe7a96e1a2028e1871b61c</code></pre>
 <p>Here’s a <a href="https://bl.ocks.org/06a512525fbe7a96e1a2028e1871b61c">link</a> to the deployed block.</p>
@@ -140,10 +134,10 @@
 <li><p><code><a href="../reference/vw_create_block.html">vw_create_block_gistid()</a></code> returns a list with the <code>endpoint</code> of the GitHub service used, and the <code>id</code> of the gist created.</p></li>
 </ul>
 <p>Depending on what you are doing, one function may be more-useful to you than the other.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">gistid &lt;-<span class="st"> </span><span class="kw"><a href="../reference/vw_create_block.html">vw_create_block_gistid</a></span>(spec_mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">gistid &lt;-<span class="st"> </span><span class="kw"><a href="../reference/vw_create_block.html">vw_create_block_gistid</a></span>(spec_mtcars)</a></code></pre></div>
 <pre><code>## block url: https://bl.ocks.org/650e59f6a81cf63b9004ae291fe90667
 ##  gist url: https://gist.github.com/650e59f6a81cf63b9004ae291fe90667</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">gistid</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">gistid</a></code></pre></div>
 <pre><code>## $endpoint
 ## [1] "https://api.github.com"
 ## 
@@ -155,10 +149,10 @@
 <h2 class="hasAnchor">
 <a href="#retrieve-a-block" class="anchor"></a>Retrieve a block</h2>
 <p>If a block has a JSON file, you can retrieve that JSON file and parse it into a vegaspec. For example, we can retrieve the vegaspec from the block that created above:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="../reference/vw_retrieve_block.html">vw_retrieve_block</a></span>(gistid<span class="op">$</span>id)</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="../reference/vw_retrieve_block.html">vw_retrieve_block</a></span>(gistid<span class="op">$</span>id)</a></code></pre></div>
 <pre><code>## retrieving `spec.json` from gist 650e59f6a81cf63b9004ae291fe90667</code></pre>
-<div id="htmlwidget-3ad5021cf32201ab0626" style="width:960px;height:500px;" class="vegawidget html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3ad5021cf32201ab0626">{"x":{
+<div id="htmlwidget-bcd8dbb6eb467afcedc7" style="width:960px;height:500px;" class="vegawidget html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bcd8dbb6eb467afcedc7">{"x":{
   "chart_spec": {
     "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
     "width": 300,
