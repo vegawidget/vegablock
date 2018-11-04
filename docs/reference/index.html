@@ -73,12 +73,27 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/blocks.html">Share with bl.ocks.org</a>
+    </li>
+  </ul>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/vegawidget/vegablock">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fa fa-github fa-2x"></span>
      
   </a>
 </li>
@@ -108,8 +123,34 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
+          <h2 id="section-creating-and-retrieving-blocks" class="hasAnchor"><a href="#section-creating-and-retrieving-blocks" class="anchor"></a>Creating and retrieving blocks</h2>
+          <p class="section-desc"><p>Use these functions to create and retrieve <a href="https://bl.ocks.org">blocks</a>. The blocks service uses GitHub gists, so you will need a GitHub account, as well as a <a href="https://github.com/settings/tokens">Personal Access Token</a> (PAT). If you want to upload a preview image, you will need the <a href="https://CRAN.R-project.org/package=webdriver"><strong>webdriver</strong></a> package and PhantomJS.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="vw_create_block.html">vw_create_block()</a></code> <code><a href="vw_create_block.html">vw_create_block_gistid()</a></code> </p>
+        </td>
+        <td><p>Create gist to use as block</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="vw_retrieve_block.html">vw_retrieve_block()</a></code> </p>
+        </td>
+        <td><p>Retrieve vegaspec from block</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="vw_block_config.html">vw_block_config()</a></code> </p>
+        </td>
+        <td><p>Specify block-configuration</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-vegawidget-utilities" class="hasAnchor"><a href="#section-vegawidget-utilities" class="anchor"></a>vegawidget utilities</h2>
+          <p class="section-desc"><p>These functions are imported from the <a href="">vegawidget</a> package, and re-exported from this package.</p></p>
         </th>
       </tr>
       <tr>
@@ -130,24 +171,6 @@
           <p><code><a href="vega_version.html">vega_version</a></code> </p>
         </td>
         <td><p>Determine Vega JavaScript versions</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vw_block_config.html">vw_block_config()</a></code> </p>
-        </td>
-        <td><p>Specify block-configuration</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vw_create_block.html">vw_create_block()</a></code> <code><a href="vw_create_block.html">vw_create_block_gistid()</a></code> </p>
-        </td>
-        <td><p>Create gist to use as block</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vw_retrieve_block.html">vw_retrieve_block()</a></code> </p>
-        </td>
-        <td><p>Retrieve vegaspec from block</p></td>
       </tr>
     </tbody>
     </table>
@@ -156,7 +179,8 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-creating-and-retrieving-blocks">Creating and retrieving blocks</a></li>
+      <li><a href="#section-vegawidget-utilities">vegawidget utilities</a></li>
     </ul>
   </div>
 </div>

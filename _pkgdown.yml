@@ -4,3 +4,44 @@ template:
 
 development:
   mode: unreleased
+
+navbar:
+  title: "vegablock"
+  left:
+    - icon: fa-home fa-lg
+      href: index.html
+    - text: "Reference"
+      href: "reference/index.html"
+    - text: "Changelog"
+      href: "news/index.html"
+    - text: Articles
+      menu:
+        - text: Share with bl.ocks.org
+          href: articles/blocks.html
+
+  right:
+    - icon: fa-github fa-2x
+      href: https://github.com/vegawidget/vegablock
+
+
+reference:
+  - title: Creating and retrieving blocks
+    desc: >
+      Use these functions to create and retrieve [blocks](https://bl.ocks.org).
+      The blocks service uses GitHub gists, so you will need a GitHub account,
+      as well as a [Personal Access Token](https://github.com/settings/tokens)
+      (PAT). If you want to upload a preview image, you will need the
+      [**webdriver**](https://CRAN.R-project.org/package=webdriver) package
+      and PhantomJS.
+    contents:
+    - vw_create_block
+    - vw_retrieve_block
+    - vw_block_config
+  - title: vegawidget utilities
+    desc: >
+      These functions are imported from the [vegawidget]() package, and
+      re-exported from this package.
+    contents:
+    - as_vegaspec
+    - vega_embed
+    - vega_version

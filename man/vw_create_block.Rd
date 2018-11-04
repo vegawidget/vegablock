@@ -23,7 +23,7 @@ vw_create_block_gistid(spec, embed = vega_embed(),
 
 \item{embed}{\code{list} to specify
 \href{https://github.com/vega/vega-embed#options}{vega-embed} options,
-see \strong{Details} on how this is set if \code{NULL}.}
+see \code{\link[=vega_embed]{vega_embed()}} for more details.}
 
 \item{.block}{\code{character}, YAML text for the \code{.block} file -
 use the helper function \code{\link[=vw_block_config]{vw_block_config()}} to specify block-configuration}
@@ -77,27 +77,29 @@ Called for side effects
 }
 }
 \description{
-These functions require that \href{https://cran.r-project.org/package=fs}{fs}
-and  \href{https://cran.r-project.org/package=gistr}{gistr} be installed.
-If you want to include a thumbnail or preview image, you will need the
-\href{https://cran.r-project.org/package=magick}{magick} package,
-\href{https://cran.r-project.org/package=webdriver}{webdriver} package,
-and PhantomJS installed.
-}
-\details{
 These functions do the same thing: create a gist; they differ only in what
 they return. \code{vw_create_block()} returns a copy of \code{spec} so that it can be
 used in a pipe; \code{vw_create_block_gistid()} returns a list of information
 about the newly-created gist.
-
-In addition to having the \strong{gistr} package installed, you will need a
-GitHub Personal Access Token (PAT) stored in an environment variable
-called \code{GITHUB_PAT}. See \href{http://happygitwithr.com/github-pat.html}{Happy Git with R}
+}
+\details{
+You will need a GitHub \href{https://github.com/settings/tokens}{Personal Access Token}
+stored in an environment variable called \code{GITHUB_PAT}.
+See \href{http://happygitwithr.com/github-pat.html}{Happy Git with R}
 for more information on how to acquire and store a PAT.
+
+If you are the default (\code{"https"}) method to upload your gist, you will need to
+set another environment variable, \code{GITHUB_USERNAME}, according to your particular
+account.
 
 The default versions of the Vega JavaScript libraries are this package's
 supported versions. To use the major (current) versions instead, use
 \code{version = vega_version(major = TRUE)}.
+
+If you want to include a thumbnail or preview image, you will need the
+\href{https://cran.r-project.org/package=magick}{magick} package,
+\href{https://cran.r-project.org/package=webdriver}{webdriver} package,
+and PhantomJS installed.
 }
 \examples{
 \dontrun{

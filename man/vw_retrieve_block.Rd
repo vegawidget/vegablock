@@ -31,13 +31,11 @@ S3 object of class \code{vegaspec}
 \description{
 You can use this function to retrieve a \code{vegaspec} from
 blocks (gists) where the spec is in its own JSON file.
-As well, this function requires that
-\href{https://cran.r-project.org/package=gistr}{gistr} be installed.
 }
 \details{
-In addition to having the \strong{gistr} package installed, you will need a
-GitHub Personal Access Token (PAT) stored in an environment variable
-called \code{GITHUB_PAT}. See \href{http://happygitwithr.com/github-pat.html}{Happy Git with R}
+You will need a GitHub \href{https://github.com/settings/tokens}{Personal Access Token}
+stored in an environment variable called \code{GITHUB_PAT}.
+See \href{http://happygitwithr.com/github-pat.html}{Happy Git with R}
 for more information on how to acquire and store a PAT.
 
 The \code{file} argument accepts a regular expression for the name of the JSON file

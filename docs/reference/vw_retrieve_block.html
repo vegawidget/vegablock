@@ -33,9 +33,7 @@
 <meta property="og:title" content="Retrieve vegaspec from block — vw_retrieve_block" />
 
 <meta property="og:description" content="You can use this function to retrieve a vegaspec from
-blocks (gists) where the spec is in its own JSON file.
-As well, this function requires that
-gistr be installed." />
+blocks (gists) where the spec is in its own JSON file." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -79,12 +77,27 @@ gistr be installed." />
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/blocks.html">Share with bl.ocks.org</a>
+    </li>
+  </ul>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/vegawidget/vegablock">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fa fa-github fa-2x"></span>
      
   </a>
 </li>
@@ -108,9 +121,7 @@ gistr be installed." />
     <div class="ref-description">
     
     <p>You can use this function to retrieve a <code>vegaspec</code> from
-blocks (gists) where the spec is in its own JSON file.
-As well, this function requires that
-<a href='https://cran.r-project.org/package=gistr'>gistr</a> be installed.</p>
+blocks (gists) where the spec is in its own JSON file.</p>
     
     </div>
 
@@ -155,9 +166,9 @@ Useful to specify with GitHub Enterprise, e.g. <code>"GITHUB_ACME_PAT"</code>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>In addition to having the <strong>gistr</strong> package installed, you will need a
-GitHub Personal Access Token (PAT) stored in an environment variable
-called <code>GITHUB_PAT</code>. See <a href='http://happygitwithr.com/github-pat.html'>Happy Git with R</a>
+    <p>You will need a GitHub <a href='https://github.com/settings/tokens'>Personal Access Token</a>
+stored in an environment variable called <code>GITHUB_PAT</code>.
+See <a href='http://happygitwithr.com/github-pat.html'>Happy Git with R</a>
 for more information on how to acquire and store a PAT.</p>
 <p>The <code>file</code> argument accepts a regular expression for the name of the JSON file
 within the gist. If you don't provide a <code>file</code>, it will return the first file

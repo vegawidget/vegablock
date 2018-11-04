@@ -6,3 +6,5 @@
 ^docs$
 ^_pkgdown\.yml$
 ^pkgdown$
+^vignettes/blocks\.Rmd$
+

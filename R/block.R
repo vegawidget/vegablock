@@ -1,30 +1,32 @@
 #' Create gist to use as block
 #'
-#' These functions require that [**fs**](https://cran.r-project.org/package=fs)
-#' and  [**gistr**](https://cran.r-project.org/package=gistr) be installed.
-#' If you want to include a thumbnail or preview image, you will need the
-#' [**magick**](https://cran.r-project.org/package=magick) package,
-#' [**webdriver**](https://cran.r-project.org/package=webdriver) package,
-#' and PhantomJS installed.
-#'
 #' These functions do the same thing: create a gist; they differ only in what
 #' they return. `vw_create_block()` returns a copy of `spec` so that it can be
 #' used in a pipe; `vw_create_block_gistid()` returns a list of information
 #' about the newly-created gist.
 #'
-#' In addition to having the **gistr** package installed, you will need a
-#' GitHub Personal Access Token (PAT) stored in an environment variable
-#' called `GITHUB_PAT`. See [Happy Git with R](http://happygitwithr.com/github-pat.html)
+#' You will need a GitHub [Personal Access Token](https://github.com/settings/tokens)
+#' stored in an environment variable called `GITHUB_PAT`.
+#' See [Happy Git with R](http://happygitwithr.com/github-pat.html)
 #' for more information on how to acquire and store a PAT.
+#'
+#' If you are the default (`"https"`) method to upload your gist, you will need to
+#' set another environment variable, `GITHUB_USERNAME`, according to your particular
+#' account.
 #'
 #' The default versions of the Vega JavaScript libraries are this package's
 #' supported versions. To use the major (current) versions instead, use
 #' `version = vega_version(major = TRUE)`.
 #'
-#' @param spec        object to be coerced to `vegaspec`, a Vega/Vega-Lite specification
+#' If you want to include a thumbnail or preview image, you will need the
+#' [**magick**](https://cran.r-project.org/package=magick) package,
+#' [**webdriver**](https://cran.r-project.org/package=webdriver) package,
+#' and PhantomJS installed.
+#'
+#' @param spec    object to be coerced to `vegaspec`, a Vega/Vega-Lite specification
 #' @param embed   `list` to specify
 #'   [vega-embed](https://github.com/vega/vega-embed#options) options,
-#'   see **Details** on how this is set if `NULL`.
+#'   see [vega_embed()] for more details.
 #' @param .block       `character`, YAML text for the `.block` file -
 #'   use the helper function [vw_block_config()] to specify block-configuration
 #' @param version       named `list` of `character`:
@@ -191,12 +193,10 @@ vw_create_block_gistid <- function(spec, embed = vega_embed(),
 #'
 #' You can use this function to retrieve a `vegaspec` from
 #' blocks (gists) where the spec is in its own JSON file.
-#' As well, this function requires that
-#' [**gistr**](https://cran.r-project.org/package=gistr) be installed.
 #'
-#' In addition to having the **gistr** package installed, you will need a
-#' GitHub Personal Access Token (PAT) stored in an environment variable
-#' called `GITHUB_PAT`. See [Happy Git with R](http://happygitwithr.com/github-pat.html)
+#' You will need a GitHub [Personal Access Token](https://github.com/settings/tokens)
+#' stored in an environment variable called `GITHUB_PAT`.
+#' See [Happy Git with R](http://happygitwithr.com/github-pat.html)
 #' for more information on how to acquire and store a PAT.
 #'
 #' The `file` argument accepts a regular expression for the name of the JSON file
