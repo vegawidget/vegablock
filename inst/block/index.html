@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- uploaded using vegablock -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@{{vega}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@{{vega_lite}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@{{vega_embed}}"></script>
+</head>
+<body>
+
+<div id="chart"></div>
+
+<script type="text/javascript">
+  const spec = "spec.json";
+  const opt = {{vega_embed_options}};
+  vegaEmbed('#chart', spec, opt).then(function(result) {
+    // access view as result.view
+  }).catch(console.error);
+</script>
+</body>
+</html>

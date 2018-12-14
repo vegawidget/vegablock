@@ -158,7 +158,7 @@ vw_block_index <- function(embed = vega_embed(),
   # data to interpolate into index.html
   data <- c(list(vega_embed_options = embed), version)
 
-  file <- system.file("block", "index.html", package = "vegawidget")
+  file <- system.file("block", "index.html", package = "vegablock")
 
   text <- readLines(file)
   text <- paste(text, collapse = "\n")
