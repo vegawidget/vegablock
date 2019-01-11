@@ -40,10 +40,7 @@ To make things easiest, you should have these environment variables set in your 
 
 - `GITHUB_USERNAME` - your GitHub-account name.
 
-If want to include preview and thumb images with the block, you will need these packages:
-
-- [**magick**](https://github.com/ropensci/magick#readme)
-- [**webdriver**](https://github.com/rstudio/webdriver#README), with PhantomJS installed
+If want to include preview and thumb images with the block, you will need **[nodejs](https://nodejs.org/en/)** installed on your system and the [**magick**](https://github.com/ropensci/magick#readme) package.
 
 ## Examples
 

@@ -11,7 +11,7 @@ library("vegawidget")
 
 Mike Bostock's [blocks service](https://bl.ocks.org) is a great resource for sharing visualizations. *Blocks* (as they are called) are not persistently stored on the blocks website; they are taken from GitHub [gists](https://gist.github.com).
 
-- If you have the [**magick**](https://github.com/ropensci/magick#readme) and [**webdriver**](https://github.com/rstudio/webdriver#README) packages (with PhantomJS installed), you can include preview and thumb images with the block.
+- If you have **[nodejs](https://nodejs.org/en/)** installed on your system and the [**magick**](https://github.com/ropensci/magick#readme) package installed, you can include preview and thumb images with the block.
 
 - If a block (not necessarily yours) has a Vega(-Lite) specification, and the specification is in its own file, you can import a `vegaspec` from a block.
 

@@ -56,16 +56,15 @@ vw_block_build_directory <-
     # image
     if (use_thumbnail || use_preview) {
 
-      has_webshot <- requireNamespace("webshot", quietly = TRUE)
+      has_node <- length(Sys.which("node")) > 0L
       has_magick <- requireNamespace("magick", quietly = TRUE)
 
-      if (!(has_webshot && has_magick)) {
-        warning("Not uploading images: requires 'webshot' and 'magick' packages")
+      if (!has_magick) {
+        warning("Not uploading images: requires 'magick' package, and 'nodejs'")
         return(path)
       }
 
-      img <- vegawidget::vw_to_png(spec, scale = 2)
-      img <- vegawidget::vw_png_bin(img)
+      img <- vegawidget::vw_to_bitmap(spec, scale = 2)
       img <- magick::image_read(img)
 
       # thumbnail
