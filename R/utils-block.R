@@ -59,7 +59,7 @@ vw_block_build_directory <-
       has_node <- unname(nchar(Sys.which("node")) > 0L)
       has_magick <- requireNamespace("magick", quietly = TRUE)
 
-      if (!(has_magick && !has_node)) {
+      if (!(has_magick && has_node)) {
         warning("Not uploading images: requires 'magick' package, and 'nodejs'")
         return(path)
       }
