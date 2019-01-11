@@ -32,6 +32,7 @@ Imports: vegawidget,
 Suggests: 
     magick,
     rsvg,
+    processx,
     testthat
 Remotes: vegawidget/vegawidget    
 Roxygen: list(markdown = TRUE)
