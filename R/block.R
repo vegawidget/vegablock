@@ -21,7 +21,7 @@
 #' If want to include preview and thumb images with the block, you will need
 #'  **[nodejs](https://nodejs.org/en/)** installed on your system,
 #'  and the **[processx](https://processx.r-lib.org/)** and
-#'  **[magick](https://github.com/ropensci/magick#readme)** packages.
+#'  **[magick](https://github.com/ropensci/magick)** packages.
 #'
 #' @param spec    object to be coerced to `vegaspec`, a Vega/Vega-Lite specification
 #' @param embed   `list` to specify

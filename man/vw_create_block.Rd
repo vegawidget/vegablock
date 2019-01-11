@@ -99,7 +99,7 @@ supported versions. To use the major (current) versions instead, use
 If want to include preview and thumb images with the block, you will need
 \strong{\href{https://nodejs.org/en/}{nodejs}} installed on your system,
 and the \strong{\href{https://processx.r-lib.org/}{processx}} and
-\strong{\href{https://github.com/ropensci/magick#readme}{magick}} packages.
+\strong{\href{https://github.com/ropensci/magick}{magick}} packages.
 }
 \examples{
 \dontrun{
