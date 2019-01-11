@@ -31,6 +31,7 @@ Imports: vegawidget,
     jsonlite
 Suggests: 
     magick,
+    rsvg,
     testthat
 Remotes: vegawidget/vegawidget    
 Roxygen: list(markdown = TRUE)
