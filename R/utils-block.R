@@ -56,7 +56,7 @@ vw_block_build_directory <-
     # image
     if (use_thumbnail || use_preview) {
 
-      has_node <- length(Sys.which("node")) > 0L
+      has_node <- nchar(Sys.which("node")) > 0L
       has_magick <- requireNamespace("magick", quietly = TRUE)
 
       if (!has_magick) {
