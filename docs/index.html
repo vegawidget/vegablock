@@ -109,7 +109,7 @@
 <li><p><code>GITHUB_PAT</code> - a GitHub <a href="https://github.com/settings/tokens">Personal Access Token (PAT)</a> you create; its scope will have to include <em>gists</em>.</p></li>
 <li><p><code>GITHUB_USERNAME</code> - your GitHub-account name.</p></li>
 </ul>
-<p>If want to include preview and thumb images with the block, you will need <strong><a href="https://nodejs.org/en/">nodejs</a></strong> installed on your system and the <a href="https://github.com/ropensci/magick#readme"><strong>magick</strong></a> package.</p>
+<p>If want to include preview and thumb images with the block, you will need <strong><a href="https://nodejs.org/en/">nodejs</a></strong> installed on your system, and the <strong><a href="https://processx.r-lib.org/">processx</a></strong> and <strong><a href="https://github.com/ropensci/magick#readme">magick</a></strong> packages.</p>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
@@ -124,8 +124,8 @@
 <p>If the block has a specific format, where the Vega(-Lite) specification is in its own file, you can retrieve a vegaspec from a block into your R environment:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="reference/vw_retrieve_block.html">vw_retrieve_block</a></span>(<span class="st">"06a512525fbe7a96e1a2028e1871b61c"</span>)</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#&gt; retrieving `spec.json` from gist 06a512525fbe7a96e1a2028e1871b61c</span></a></code></pre></div>
-<div id="htmlwidget-34f11f4ece3f61d656a2" style="width:auto;height:auto;" class="vegawidget html-widget"></div>
-<script type="application/json" data-for="htmlwidget-34f11f4ece3f61d656a2">{"x":{
+<div id="htmlwidget-7bff18fed051f1bf0f51" style="width:auto;height:auto;" class="vegawidget html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7bff18fed051f1bf0f51">{"x":{
   "chart_spec": {
     "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
     "width": 300,

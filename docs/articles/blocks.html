@@ -83,7 +83,7 @@
     <div class="page-header toc-ignore">
       <h1>Share with bl.ocks.org</h1>
             
-            <h4 class="date">2019-01-10</h4>
+            <h4 class="date">2019-01-11</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/vegawidget/vegablock/blob/master/vignettes/blocks.Rmd"><code>vignettes/blocks.Rmd</code></a></small>
       <div class="hidden name"><code>blocks.Rmd</code></div>
@@ -96,7 +96,7 @@
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(<span class="st">"vegawidget"</span>)</a></code></pre></div>
 <p>Mike Bostock’s <a href="https://bl.ocks.org">blocks service</a> is a great resource for sharing visualizations. <em>Blocks</em> (as they are called) are not persistently stored on the blocks website; they are taken from GitHub <a href="https://gist.github.com">gists</a>.</p>
 <ul>
-<li><p>If you have <strong><a href="https://nodejs.org/en/">nodejs</a></strong> installed on your system and the <a href="https://github.com/ropensci/magick#readme"><strong>magick</strong></a> package installed, you can include preview and thumb images with the block.</p></li>
+<li><p>If you have <strong><a href="https://nodejs.org/en/">nodejs</a></strong> installed on your system and the <strong><a href="https://processx.r-lib.org/">processx</a></strong> and <strong><a href="https://github.com/ropensci/magick#readme">magick</a></strong> packages installed, you can include preview and thumb images with the block.</p></li>
 <li><p>If a block (not necessarily yours) has a Vega(-Lite) specification, and the specification is in its own file, you can import a <code>vegaspec</code> from a block.</p></li>
 </ul>
 <p>There are a few things you will have to set up to upload gists. First and foremost you will need a GitHub account. From this account, you will need to:</p>
@@ -152,8 +152,8 @@
 <p>If a block has a JSON file, you can retrieve that JSON file and parse it into a vegaspec. For example, we can retrieve the vegaspec from the block that created above:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="../reference/vw_retrieve_block.html">vw_retrieve_block</a></span>(gistid<span class="op">$</span>id)</a></code></pre></div>
 <pre><code>## retrieving `spec.json` from gist 650e59f6a81cf63b9004ae291fe90667</code></pre>
-<div id="htmlwidget-017744a9420266acf580" style="width:auto;height:auto;" class="vegawidget html-widget"></div>
-<script type="application/json" data-for="htmlwidget-017744a9420266acf580">{"x":{
+<div id="htmlwidget-5603b41d41c69843df13" style="width:auto;height:auto;" class="vegawidget html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5603b41d41c69843df13">{"x":{
   "chart_spec": {
     "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
     "width": 300,

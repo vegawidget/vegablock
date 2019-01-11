@@ -96,10 +96,10 @@ The default versions of the Vega JavaScript libraries are this package's
 supported versions. To use the major (current) versions instead, use
 \code{version = vega_version(major = TRUE)}.
 
-If you want to include a thumbnail or preview image, you will need the
-\href{https://cran.r-project.org/package=magick}{magick} package,
-\href{https://cran.r-project.org/package=webdriver}{webdriver} package,
-and PhantomJS installed.
+If want to include preview and thumb images with the block, you will need
+\strong{\href{https://nodejs.org/en/}{nodejs}} installed on your system,
+and the \strong{\href{https://processx.r-lib.org/}{processx}} and
+\strong{\href{https://github.com/ropensci/magick#readme}{magick}} packages.
 }
 \examples{
 \dontrun{

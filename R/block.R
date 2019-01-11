@@ -18,10 +18,10 @@
 #' supported versions. To use the major (current) versions instead, use
 #' `version = vega_version(major = TRUE)`.
 #'
-#' If you want to include a thumbnail or preview image, you will need the
-#' [**magick**](https://cran.r-project.org/package=magick) package,
-#' [**webdriver**](https://cran.r-project.org/package=webdriver) package,
-#' and PhantomJS installed.
+#' If want to include preview and thumb images with the block, you will need
+#'  **[nodejs](https://nodejs.org/en/)** installed on your system,
+#'  and the **[processx](https://processx.r-lib.org/)** and
+#'  **[magick](https://github.com/ropensci/magick#readme)** packages.
 #'
 #' @param spec    object to be coerced to `vegaspec`, a Vega/Vega-Lite specification
 #' @param embed   `list` to specify

@@ -9,12 +9,12 @@ Status](https://travis-ci.org/vegawidget/vegablock.svg?branch=master)](https://t
 The goal of vegablock is to provide an interface between Vega and
 Blocks.
 
-The Blocks website <https://bl.ocks.org> provides a way to share
+The [Blocks](https://bl.ocks.org) website provides a way to share
 JavaScript-based visualizations using GitHub gists; the
 [**vegawidget**](https://vegawidget.github.io/vegawidget) package
-provides a way to compose and render Vega (JavaScript) visualizations
-using R. This package provides a bridge between the Blocks website and
-the vegawidget package.
+provides a way to compose and render Vega(-Lite) (JavaScript)
+visualizations using R. This package provides a bridge between the
+Blocks website and the vegawidget package.
 
 If you have a GitHub account, you can use this package to deploy
 Vega(-Lite) blocks. Further, if a block contains a Vega(-Lite)
@@ -33,25 +33,26 @@ install_github("vegawidget/vegablock")
 To make things easiest, you should have these environment variables set
 in your `.Renviron` file:
 
-  - `GITHUB_PAT` - GitHub [Personal Access Token
-    (PAT)](https://github.com/settings/tokens).
+  - `GITHUB_PAT` - a GitHub [Personal Access Token
+    (PAT)](https://github.com/settings/tokens) you create; its scope
+    will have to include *gists*.
 
-  - `GITHUB_USERNAME` - your GitHub-account name
+  - `GITHUB_USERNAME` - your GitHub-account name.
+
+If want to include preview and thumb images with the block, you will
+need **[nodejs](https://nodejs.org/en/)** installed on your system, and
+the **[processx](https://processx.r-lib.org/)** and
+**[magick](https://github.com/ropensci/magick#readme)** packages.
 
 ## Examples
 
 ``` r
 library("vegablock")
 library("vegawidget")
-#> 
-#> Attaching package: 'vegawidget'
-#> The following objects are masked from 'package:vegablock':
-#> 
-#>     vw_block_config, vw_create_block, vw_create_block_gistid,
-#>     vw_retrieve_block
 ```
 
-With the enviroment varaibles set, you can create a block from vegaspec:
+With the environment variables set, you can create a block from
+vegaspec:
 
 ``` r
 vw_create_block(spec_mtcars)
