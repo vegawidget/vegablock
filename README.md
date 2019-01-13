@@ -1,3 +1,4 @@
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis-CI Build
 Status](https://travis-ci.org/vegawidget/vegablock.svg?branch=master)](https://travis-ci.org/vegawidget/vegablock)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/vegablock)](https://cran.r-project.org/package=vegablock)
