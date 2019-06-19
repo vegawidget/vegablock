@@ -1,7 +1,5 @@
 ---
-output:
-  md_document:
-    variant: gfm
+output: github_document
 ---
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
@@ -14,7 +12,8 @@ output:
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  fig.path = "README-",
+  dev = "svg"
 )
 ```
 
@@ -41,7 +40,7 @@ To make things easiest, you should have these environment variables set in your 
 
 - `GITHUB_USERNAME` - your GitHub-account name.
 
-If want to include preview and thumb images with the block, you will need **[nodejs](https://nodejs.org/en/)** installed on your system, and the **[processx](https://processx.r-lib.org/)** and **[magick](https://github.com/ropensci/magick#readme)** packages.
+If want to include preview and thumb images with the block, you will need **[nodejs](https://nodejs.org/en/)** installed on your system, and the **[processx](https://processx.r-lib.org/)**, **[rsvg](https://github.com/jeroen/rsvg)**, and **[magick](https://github.com/ropensci/magick#readme)** packages.
 
 ## Examples
 

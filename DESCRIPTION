@@ -1,6 +1,6 @@
 Package: vegablock
 Title: Provides an Interface between Vega and Blocks
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R:
     person(given = "Ian",
            family = "Lyttle",
@@ -20,7 +20,8 @@ LazyData: true
 RoxygenNote: 6.1.1
 URL: https://github.com/vegawidget/vegablock
 BugReports: https://github.com/vegawidget/vegablock/issues
-Imports: vegawidget,
+Imports: 
+    vegawidget,
     yaml,
     gistr,
     git2r,
@@ -30,9 +31,10 @@ Imports: vegawidget,
     rlang,
     jsonlite
 Suggests: 
-    magick,
     rsvg,
     processx,
-    testthat
+    magick,
+    testthat,
+    pkgdown
 Remotes: vegawidget/vegawidget    
 Roxygen: list(markdown = TRUE)

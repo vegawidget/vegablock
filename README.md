@@ -1,3 +1,4 @@
+
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis-CI Build
 Status](https://travis-ci.org/vegawidget/vegablock.svg?branch=master)](https://travis-ci.org/vegawidget/vegablock)
@@ -42,7 +43,8 @@ in your `.Renviron` file:
 
 If want to include preview and thumb images with the block, you will
 need **[nodejs](https://nodejs.org/en/)** installed on your system, and
-the **[processx](https://processx.r-lib.org/)** and
+the **[processx](https://processx.r-lib.org/)**,
+**[rsvg](https://github.com/jeroen/rsvg)**, and
 **[magick](https://github.com/ropensci/magick#readme)** packages.
 
 ## Examples
@@ -74,4 +76,4 @@ vw_retrieve_block("06a512525fbe7a96e1a2028e1871b61c")
 #> retrieving `spec.json` from gist 06a512525fbe7a96e1a2028e1871b61c
 ```
 
-![](README-unnamed-chunk-5-1.png)<!-- -->
+![](README-unnamed-chunk-5-1.svg)<!-- -->
