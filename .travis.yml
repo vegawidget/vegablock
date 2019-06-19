@@ -4,11 +4,6 @@ language: R
 sudo: false
 cache: packages
 
-addons:
-  apt:
-    packages:
-      - libmagick++-dev # magick
-
 matrix:
   include:
   - r: devel
@@ -20,22 +15,24 @@ matrix:
       skip_cleanup: true
   - r: oldrel
 
-cache:
-  # Main R library
-  packages: true
-  directories:
-  # PhantomJS
-  - travis_phantomjs
+addons:
+  apt:
+    packages:
+      - libv8-dev       # for V8
+      - valgrind        # for V8
+      - libmagick++-dev # magick
 
-# Install PhantomJS (if not cached)
+# managing node in a project for another language
+# https://austinpray.com/ops/2015/09/20/change-travis-node-version.html
+#
+# doing this becuase Vega-Lite needs node 8 and the R Travis container uses node 6
+# (there has to be a cleaner way to do this)
 before_install:
-  - "export PHANTOMJS_VERSION=2.1.1"
-  - "phantomjs --version"
-  - "export PATH=$PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/bin:$PATH"
-  - "hash -r"
-  - "phantomjs --version"
-  - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then rm -rf $PWD/travis_phantomjs; mkdir -p $PWD/travis_phantomjs; fi"
-  - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then wget https://github.com/Medium/phantomjs/releases/download/v$PHANTOMJS_VERSION/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -O $PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2; fi"
-  - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then tar -xvf $PWD/travis_phantomjs/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -C $PWD/travis_phantomjs; fi"
-  - "if [ $(phantomjs --version) != $PHANTOMJS_VERSION ]; then hash -r; fi"
-  - "phantomjs --version"
+  - echo "***node***"
+  - node --version
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install 8
+  - npm install
+  - echo "***node***"
+  - node --version
+
+
